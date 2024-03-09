@@ -10,19 +10,14 @@ import SwiftUI
 @available(macOS 12.0, *)
 
 public struct TextFieldView: View {
-  @State private var name: String = ""
-  
-  public var body: some View {
-    TextField(text: $name, label: {
-      Text("name")
-        .foregroundStyle(.clear)
-    })
-    .frame(width: 200, height: 50)
-    .padding()
-    .clipShape(Circle())
-  }
   
   public init() { }
+  
+  public var body: some View {
+    Text("Ibrahim Hosseini")
+  }
+  
+  
   
 }
 
