@@ -14,7 +14,7 @@ public struct CustomTextView: View {
   public init() { }
   
   public var body: some View {
-    Text("Ibrahim Hosseini")
+    Text("Developer!")
   }
   
   
