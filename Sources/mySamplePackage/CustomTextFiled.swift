@@ -8,9 +8,11 @@
 import SwiftUI
 
 public struct CustomTextFiled: View {
-  public init(){}
-  
   @State private var input: String = ""
+
+  public init(_ input: String){
+    self.input = input
+  }
   
   public var body: some View {
     TextField(text: $input) {
@@ -22,5 +24,5 @@ public struct CustomTextFiled: View {
 }
 
 #Preview {
-    CustomTextFiled()
+  CustomTextFiled("Ibrahim Hosseini")
 }
