@@ -9,10 +9,10 @@ import SwiftUI
 
 @available(macOS 12.0, *)
 
-struct TextFieldView: View {
+public struct TextFieldView: View {
   @State private var name: String = ""
   
-  var body: some View {
+  public var body: some View {
     TextField(text: $name, label: {
       Text("name")
         .foregroundStyle(.clear)
@@ -22,14 +22,12 @@ struct TextFieldView: View {
     .clipShape(Circle())
   }
   
-  public init(name: String) {
-    self.name = name
-  }
+  public init() { }
   
 }
 
 #if os(macOS)
 #Preview {
-  TextFieldView(name: "Ibrahim")
+  TextFieldView()
 }
 #endif
