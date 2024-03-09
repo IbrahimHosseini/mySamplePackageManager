@@ -11,18 +11,19 @@ import SwiftUI
 
 public struct CustomTextView: View {
   
-  public init() { }
-  
-  public var body: some View {
-    Text("Developer!")
+  private var text = "Developer!"
+  public init(_ text: String) {
+    self.text = text
   }
   
-  
+  public var body: some View {
+    Text(text)
+  }
   
 }
 
 #if os(macOS)
 #Preview {
-  CustomTextView()
+  CustomTextView("Hi")
 }
 #endif
