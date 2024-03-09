@@ -9,20 +9,22 @@ import SwiftUI
 
 @available(macOS 12.0, *)
 
-struct TextFieldView: View {
+public struct TextFieldView: View {
   @State private var name: String = ""
   
-  var body: some View {
+  public var body: some View {
     TextField(text: $name, label: {
       Text("Enter your name")
+        .foregroundStyle(.clear)
     })
+    .frame(width: 200, height: 50)
+    .padding()
+    .clipShape(Circle())
   }
 }
 
+#if os(macOS)
 #Preview {
-  if #available(macOS 12.0, *) {
     TextFieldView()
-  } else {
-    // Fallback on earlier versions
-  }
 }
+#endif
