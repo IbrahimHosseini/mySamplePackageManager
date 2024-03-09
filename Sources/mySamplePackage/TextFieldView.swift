@@ -9,10 +9,10 @@ import SwiftUI
 
 @available(macOS 12.0, *)
 
-public struct TextFieldView: View {
+struct TextFieldView: View {
   @State private var name: String = ""
   
-  public var body: some View {
+  var body: some View {
     TextField(text: $name, label: {
       Text("Enter your name")
         .foregroundStyle(.clear)
