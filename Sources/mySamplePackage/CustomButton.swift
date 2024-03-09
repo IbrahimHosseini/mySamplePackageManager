@@ -7,16 +7,21 @@
 
 import SwiftUI
 
-struct CustomButton: View {
-    var body: some View {
-      Button(action: {
-        
-      }, label: {
-        Text("Enter")
+public struct CustomButton: View {
+  
+  private var title = "Enter"
+  
+  public init(_ title: String) {
+    self.title = title
+  }
+  
+  public var body: some View {
+      Button(action: {}, label: {
+        Text(title)
       })
     }
 }
 
 #Preview {
-    CustomButton()
+  CustomButton("Enter")
 }
