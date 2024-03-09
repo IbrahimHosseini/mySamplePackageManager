@@ -14,17 +14,22 @@ struct TextFieldView: View {
   
   var body: some View {
     TextField(text: $name, label: {
-      Text("Enter your name")
+      Text("name")
         .foregroundStyle(.clear)
     })
     .frame(width: 200, height: 50)
     .padding()
     .clipShape(Circle())
   }
+  
+  public init(name: String) {
+    self.name = name
+  }
+  
 }
 
 #if os(macOS)
 #Preview {
-    TextFieldView()
+  TextFieldView(name: "Ibrahim")
 }
 #endif
